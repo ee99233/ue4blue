@@ -42,6 +42,8 @@ public class GraphAndBlueprint : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
+                "GraphEditor",
+                "EditorStyle"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);

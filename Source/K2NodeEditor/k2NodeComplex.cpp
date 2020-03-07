@@ -49,7 +49,7 @@ void UK2NodeComplex::AllocateDefaultPins()
 void UK2NodeComplex::ExpandNode(class FKismetCompilerContext& CompilerContext, UEdGraph* SourceGraph)
 {
 	Super::ExpandNode(CompilerContext, SourceGraph);
-
+	
 	UK2Node_IfThenElse* ifelse = CompilerContext.SpawnIntermediateNode<UK2Node_IfThenElse>(this, SourceGraph);
 	ifelse->AllocateDefaultPins();
 	CompilerContext.MessageLog.NotifyIntermediateObjectCreation(ifelse, this);

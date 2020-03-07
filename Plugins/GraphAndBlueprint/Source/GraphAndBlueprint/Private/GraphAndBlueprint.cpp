@@ -13,6 +13,7 @@
 #include "Widgets/Text/STextBlock.h"
 
 #include "Framework/MultiBox/MultiBoxBuilder.h"
+#include "MyGraphPanelNodeFactory.h"
 
 static const FName GraphAndBlueprintTabName("GraphAndBlueprint");
 
@@ -53,6 +54,8 @@ void FGraphAndBlueprintModule::StartupModule()
 	FGlobalTabmanager::Get()->RegisterNomadTabSpawner(GraphAndBlueprintTabName, FOnSpawnTab::CreateRaw(this, &FGraphAndBlueprintModule::OnSpawnPluginTab))
 		.SetDisplayName(LOCTEXT("FGraphAndBlueprintTabTitle", "GraphAndBlueprint"))
 		.SetMenuType(ETabSpawnerMenuType::Hidden);
+
+	FEdGraphUtilities::RegisterVisualNodeFactory(MakeShareable(new FMyGraphPanelNodeFactory()));
 }
 
 void FGraphAndBlueprintModule::ShutdownModule()

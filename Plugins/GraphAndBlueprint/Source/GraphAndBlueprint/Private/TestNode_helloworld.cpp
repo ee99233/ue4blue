@@ -9,5 +9,8 @@ void UTest_Node_Helloworld::AllocateDefaultPins()
 {
 	CreatePin(EGPD_Input, "HelloNodeInput", FName(), TEXT("In"));
 	CreatePin(EGPD_Output, "HelloNodeOutpunt", FName(), TEXT("Out"));
-	CreatePin(EGPD_MAX, "hellownodemax", FName(), TEXT("Max"));
+	CreatePin(EGPD_Output, "hellownodemax", FName(), TEXT("Max"));
+	CreatePin(EGPD_Input, "HelloNodeInput", FName(), TEXT("In"));
+	CreatePin(EGPD_Output, "HelloNodeOutpunt", FName(), TEXT("Out"));
+	CreatePin(EGPD_Output, "hellownodemax", FName(), TEXT("Max"));
 }
